@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>admin</title>
+    <meta name="author" content="name">
+    <meta name="description" content="description here">
+    <meta name="keywords" content="keywords,here">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="bg-gray-800 font-sans leading-normal tracking-normal mt-12">
+
+<header>
+    
+    <nav aria-label="menu nav" class="bg-gray-800 pt-2 md:pt-1 pb-1 px-1 mt-0 h-auto fixed w-full z-20 top-0">
+        <h2 style="display: flex; color: aliceblue;text-align: center; padding-top: 1rem;justify-content: center;align-items: center;padding-bottom: 1rem;padding-left: 2rem;">Welcome Admin</h2>
+    </nav>
+</header>
+
+
+<main>
+
+    <div class="flex flex-col md:flex-row">
+        <nav aria-label="alternative nav">
+            <div class="bg-gray-800 shadow-xl h-20 fixed bottom-0 mt-12 md:relative md:h-screen z-10 w-full md:w-48 content-center">
+
+                <div class="md:mt-12 md:w-48 md:fixed md:left-0 md:top-0 content-center md:content-start text-left justify-between">
+                    <ul class="list-reset flex flex-row md:flex-col pt-3 md:py-3 px-1 md:px-2 text-center md:text-left">
+                        <li class="mr-3 flex-1">
+                            <a href="members_list.html" class="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-pink-500">
+                                <ion-icon name="people-outline"></ion-icon><span class="pb-1 md:pb-0 text-xs md:text-base text-gray-400 md:text-gray-200 block md:inline-block" style="padding-left: 1rem;">Members</span>
+                            </a>
+                        </li>
+                        <li class="mr-3 flex-1">
+                            <a href="#" class="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-purple-500">
+                                <ion-icon name="list-circle-outline"></ion-icon><span class="pb-1 md:pb-0 text-xs md:text-base text-gray-400 md:text-gray-200 block md:inline-block"style="padding-left: 1rem;">Forms </span>
+                            </a>
+                        </li>
+                        <li class="mr-3 flex-1">
+                            <a href="#" class="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-blue-600">
+                                <ion-icon name="duplicate-outline"></ion-icon><span class="pb-1 md:pb-0 text-xs md:text-base text-white md:text-white block md:inline-block"style="padding-left: 1rem;">Create form</span>
+                            </a>
+                        </li>
+                        <li class="mr-3 flex-1">
+                            <a href="#" class="block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-red-500">
+                                <ion-icon name="download-outline"></ion-icon><span class="pb-1 md:pb-0 text-xs md:text-base text-gray-400 md:text-gray-200 block md:inline-block"style="padding-left: 1rem;">Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </nav>
+        <section>
+            <div id="main" class="main-content flex-1 bg-gray-100 " style="margin-top: 1rem;">
+
+                    <div class=" bg-gradient-to-r from-blue-900 to-gray-800  shadow text-2xl text-white" style="padding: 1rem 10rem 1rem 2rem;">
+                        <h1 class="font-bold pl-2">Create Topics</h1>
+                    </div>
+
+                    <div class="flex flex-wrap">
+                      <div class="w-full  p-6 text-xl" style="padding-right: 1rem;"><label for="member">Number of Topics: </label>
+                        <input type="text" id="member" name="member" value=""><br><br><style>#filldetails:hover{background-image: linear-gradient(#3c8ce7, #00eaff);}</style>
+                        <button class="bg-gradient-to-r from-blue-900 to-gray-800  p-4 shadow text-xl text-white" id="filldetails" onclick="addFields()" style="display: flex; border-radius: 1rem;padding: .6rem  0.4rem .6rem  0.4rem; ">Submit</button>
+                            <div id="container">
+                        </div>
+            </div>
+            <div id="" class="main-content flex-1 bg-gray-100 " >
+
+                <div class=" bg-gradient-to-r from-blue-900 to-gray-800  shadow text-2xl text-white" style="padding: 1rem 10rem 1rem 2rem;">
+                    <h1 class="font-bold pl-2">Fill in</h1>
+                </div>
+
+                <div class="flex flex-wrap">
+                    <div class="w-full  p-6 text-xl" style="padding-right: 1rem;"><label for="member">No of Preference</label>
+                    <input type="number" id="prelist" name="" value="">
+                      
+                
+                   <br><br><label for="date">Deadline</label>
+                    <input type="date" id="date" name="" value="" style="margin-left:4.5rem;" ><br> <br>
+                    <label for="Time">Time</label><input type="time" style="margin-left: 7rem;">
+                </div>
+            
+
+</div></div></div></div>                    <button class=" shadow text-xl text-white" id="filldetails"  style="display: flex; border-radius: 1rem;padding: .6rem  0.4rem .6rem  0.4rem;background-color: #0f4a8dbd; margin-top: 1.5rem;;">Generate to all</button>
+
+        </section>
+    </div>
+</main>
+
+
+
+
+<script>
+    function toggleDD(myDropMenu) {
+        document.getElementById(myDropMenu).classList.toggle("invisible");
+    }
+    function filterDD(myDropMenu, myDropMenuSearch) {
+        var input, filter, ul, li, a, i;
+        input = document.getElementById(myDropMenuSearch);
+        filter = input.value.toUpperCase();
+        div = document.getElementById(myDropMenu);
+        a = div.getElementsByTagName("a");
+        for (i = 0; i < a.length; i++) {
+            if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                a[i].style.display = "";
+            } else {
+                a[i].style.display = "none";
+            }
+        }
+    }
+    window.onclick = function(event) {
+        if (!event.target.matches('.drop-button') && !event.target.matches('.drop-search')) {
+            var dropdowns = document.getElementsByClassName("dropdownlist");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (!openDropdown.classList.contains('invisible')) {
+                    openDropdown.classList.add('invisible');
+                }
+            }
+        }
+    }
+    function addFields() {
+          var number = document.getElementById("member").value;
+          var container = document.getElementById("container");
+          while (container.hasChildNodes()) {
+            container.removeChild(container.lastChild);
+          }
+          for (i = 0; i < number; i++) {
+            container.appendChild(document.createElement("br"));
+
+            container.appendChild(document.createTextNode("Topic " + (i + 1)+ "   "));
+            var input = document.createElement("input");
+            input.type = "text";
+            container.appendChild(input);
+            container.appendChild(document.createElement("br"));
+
+
+        }
+        }
+
+</script>
+
+
+</body>
+
+</html>
